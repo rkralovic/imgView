@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="sk.ksp.riso.imgView"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:label="@string/app_name" android:icon="@drawable/icon">
+        <activity android:name="imgView"
+                  android:label="@string/app_name">
+            <!-- We can view animated gifs. -->
+            <intent-filter>
+              <action android:name="android.intent.action.VIEW" />
+              <category android:name="android.intent.category.BROWSABLE" />
+              <category android:name="android.intent.category.DEFAULT" />
+              <data android:mimeType="image/gif"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest> 
