@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.ComponentName;
 import android.util.Log;
 import android.webkit.WebView;
+import android.webkit.WebSettings;
 import android.os.ParcelFileDescriptor;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -24,6 +25,9 @@ public class imgView extends Activity
         setContentView(wv);
 
         wv.getSettings().setBuiltInZoomControls(true);
+        wv.getSettings().setMinimumFontSize(1);
+        wv.getSettings().setMinimumLogicalFontSize(1);
+        wv.getSettings().setDefaultZoom(WebSettings.ZoomDensity.FAR);
 
         /*
         Intent in = new Intent(getIntent());
